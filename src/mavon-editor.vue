@@ -672,7 +672,11 @@
             },
             d_render: function(val, oldVal) {
                 this.$nextTick(function(){
-                    mermaid.init()
+                    if(val && val.length > 0 && val.indexOf && val.indexOf("mermaid") !== -1) {
+                        _.debounce(function(){
+                            mermaid.init();
+                        },200)()
+                    }
                 })
             },
             value: function (val, oldVal) {
