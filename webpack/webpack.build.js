@@ -13,6 +13,7 @@ var base = require('./webpack.base.js')
 var merge = require('merges-utils')
 var path = require('path');
 var webpack = require('webpack');
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 var config = {
     entry: {
         index: path.resolve(__dirname, '../src/index.js')
@@ -77,11 +78,15 @@ var config = {
 
 var res = merge([base, config])
 res.plugins = res.plugins.concat([
-    new webpack.optimize.UglifyJsPlugin({
-        compress: {
-            warnings: false
-        },
-        comments: false
+    new UglifyJsPlugin({
+        "uglifyOptions":
+            {
+                compress: {
+                    warnings: false
+                },
+                sourceMap: true,
+                comments: false
+            }
     })
 ])
 module.exports = res

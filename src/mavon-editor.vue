@@ -89,6 +89,7 @@
     import {keydownListen} from './lib/core/keydown-listen.js'
     import hljsCss from './lib/core/hljs/lang.hljs.css.js'
     import hljsLangs from './lib/core/hljs/lang.hljs.js'
+    import mermaid from 'mermaid'
     import {
         fullscreenchange,
         /* windowResize, */
@@ -301,6 +302,7 @@
         },
         mounted() {
             var $vm = this;
+            mermaid.initialize({ theme: "default", startOnLoad: false })
             hljs_opts.highlighted = this.ishljs;
             this.$el.addEventListener('paste', function (e) {
                 $vm.$paste(e);
@@ -667,6 +669,11 @@
         watch: {
             d_value: function (val, oldVal) {
                 this.iRender(val);
+            },
+            d_render: function(val, oldVal) {
+                this.$nextTick(function(){
+                    mermaid.init()
+                })
             },
             value: function (val, oldVal) {
                 if (val !== this.d_value) {

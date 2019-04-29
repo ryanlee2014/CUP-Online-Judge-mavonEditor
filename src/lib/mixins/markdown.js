@@ -72,6 +72,7 @@ function newInstance() {
 // math katex
     var katex = require('markdown-it-katex-external');
     var miip = require('../dependency/markdown-it-images-preview');
+    var mermaid = require("markdown-it-mermaid").default;
     console.log("miip", miip);
     markdown.use(mihe, hljs_opts)
         .use(emoji)
@@ -91,6 +92,7 @@ function newInstance() {
         .use(katex)
         .use(taskLists)
         .use(toc)
+        .use(mermaid)
     return markdown;
 }
 export default newInstance;
