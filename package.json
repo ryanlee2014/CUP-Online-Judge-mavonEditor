@@ -1,6 +1,6 @@
 {
-  "name": "mavon-editor",
-  "version": "2.6.17",
+  "name": "@ryanlee2014/mavon-editor",
+  "version": "1.0.1",
   "description": "Vue markdown editor",
   "main": "dist/mavon-editor.js",
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hinesboy/mavonEditor.git"
+    "url": "git+https://github.com/ryanlee2014/CUP-Online-Judge-mavonEditor.git"
   },
   "keywords": [
     "javascript",
@@ -23,9 +23,9 @@
   "author": "hinesboy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hinesboy/mavonEditor/issues"
+    "url": "https://github.com/ryanlee2014/CUP-Online-Judge-mavonEditor/issues"
   },
-  "homepage": "https://github.com/hinesboy/mavonEditor#readme",
+  "homepage": "https://github.com/ryanlee2014/CUP-Online-Judge-mavonEditor#readme",
   "dependencies": {
     "highlight.js": "^9.11.0",
     "highlight.js-async-webpack": "^1.0.4",
