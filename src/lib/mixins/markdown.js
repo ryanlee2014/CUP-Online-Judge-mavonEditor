@@ -70,7 +70,7 @@ function newInstance() {
     };
     var mihe = require('markdown-it-highlightjs-external');
 // math katex
-    var katex = require('markdown-it-katex-external');
+    const katex = require("@ryanlee2014/markdown-it-katex");
     var miip = require('../dependency/markdown-it-images-preview');
     var mermaid = require("markdown-it-mermaid").default;
     console.log("miip", miip);
